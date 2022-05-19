@@ -126,12 +126,13 @@ inputKey.addEventListener("keydown", e => {
 const shareData = {
   title: 'MDN',
   text: 'Learn web development on MDN!',
-  url: 'https://developer.mozilla.org'
+  url: 'https://developer.mozilla.org',
+  files : ["https://cdn.pixabay.com/photo/2022/05/12/19/11/flowers-7192179__480.jpg","https://cdn.pixabay.com/photo/2022/05/04/09/13/bordeaux-7173548__340.jpg"]
 }
 
 let shareBtn = document.getElementById("shareBtn")
 
 shareBtn.addEventListener("click", function(){
-  navigator.share(shareData). then( (resp) => console.log(resp)).catch((err) => console.log(err))
+  navigator.canShare(shareData). then( (resp) => console.log(resp)).catch((err) => console.log(err))
 })
 
