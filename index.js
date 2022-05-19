@@ -133,6 +133,6 @@ const shareData = {
 let shareBtn = document.getElementById("shareBtn")
 
 shareBtn.addEventListener("click", function(){
-  navigator.canShare(shareData). then( (resp) => console.log(resp)).catch((err) => console.log(err))
+  navigator.share(shareData). then( (resp) => console.log(resp)).catch((err) => console.log(err))
 })
 
