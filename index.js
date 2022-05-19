@@ -180,9 +180,9 @@ inputKey.addEventListener("keydown", e => {
 // }
 
 var shareButton = document.getElementById('share-button');
-
+let filesArray = ["https://cdn.pixabay.com/photo/2022/05/12/19/11/flowers-7192179__480.jpg","https://cdn.pixabay.com/photo/2022/05/04/09/13/bordeaux-7173548__340.jpg"]
 shareButton.addEventListener('click', function () {
-    var filesArray = document.getElementById('share-files').files
+    // var filesArray = document.getElementById('share-files').files
     var shareData = { files: filesArray };
 
     if (navigator.canShare && navigator.canShare(shareData)) {
